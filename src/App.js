@@ -73,7 +73,6 @@ export default function App() {
 
       setTimerOn(true)
 
-
     }
     setDies(oldDies =>
       oldDies.map((die) => {
@@ -83,6 +82,7 @@ export default function App() {
   }
   function rollDice() {
     if (tenzies) {
+      setTimer({ count: 0, min: 0, sec: 0 })
       setTenzies(false);
       setDies(allNewDice())
 
